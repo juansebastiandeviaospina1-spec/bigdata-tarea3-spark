@@ -1,0 +1,174 @@
+26/10/29 21:14:14 WARN Utils: Your hostname, BIGDATA resolves to a loopback address: 127.0.1.1; using 192.168.1.90 instead (on interface enp0s3)
+26/10/29 21:14:14 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/10/29 21:14:15 INFO SparkContext: Running Spark version 3.5.3
+26/10/29 21:14:15 INFO SparkContext: OS info Linux, 5.15.0-194-generic, amd64
+26/10/29 21:14:15 INFO SparkContext: Java version 11.0.32.1
+26/10/29 21:14:15 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/29 21:14:15 INFO ResourceUtils: ==============================================================
+26/10/29 21:14:15 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/29 21:14:15 INFO ResourceUtils: ==============================================================
+26/10/29 21:14:15 INFO SparkContext: Submitted application: Tarea3_Batch_COVID
+26/10/29 21:14:15 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/29 21:14:15 INFO ResourceProfile: Limiting resource is cpu
+26/10/29 21:14:15 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/29 21:14:16 INFO SecurityManager: Changing view acls to: vboxuser
+26/10/29 21:14:16 INFO SecurityManager: Changing modify acls to: vboxuser
+26/10/29 21:14:16 INFO SecurityManager: Changing view acls groups to: 
+26/10/29 21:14:16 INFO SecurityManager: Changing modify acls groups to: 
+26/10/29 21:14:16 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: vboxuser; groups with view permissions: EMPTY; users with modify permissions: vboxuser; groups with modify permissions: EMPTY
+26/10/29 21:14:16 INFO Utils: Successfully started service 'sparkDriver' on port 42013.
+26/10/29 21:14:16 INFO SparkEnv: Registering MapOutputTracker
+26/10/29 21:14:16 INFO SparkEnv: Registering BlockManagerMaster
+26/10/29 21:14:16 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/29 21:14:16 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/29 21:14:16 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/29 21:14:16 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-90ac4ea1-b5be-48eb-8a55-ed15e00c6c91
+26/10/29 21:14:16 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+26/10/29 21:14:16 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/29 21:14:16 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/29 21:14:16 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/29 21:14:16 INFO Executor: Starting executor ID driver on host 192.168.1.90
+26/10/29 21:14:16 INFO Executor: OS info Linux, 5.15.0-194-generic, amd64
+26/10/29 21:14:16 INFO Executor: Java version 11.0.32.1
+26/10/29 21:14:16 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/29 21:14:16 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@342655b3 for default.
+26/10/29 21:14:16 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44341.
+26/10/29 21:14:16 INFO NettyBlockTransferService: Server created on 192.168.1.90:44341
+26/10/29 21:14:16 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/29 21:14:16 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 192.168.1.90, 44341, None)
+26/10/29 21:14:16 INFO BlockManagerMasterEndpoint: Registering block manager 192.168.1.90:44341 with 434.4 MiB RAM, BlockManagerId(driver, 192.168.1.90, 44341, None)
+26/10/29 21:14:16 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 192.168.1.90, 44341, None)
+26/10/29 21:14:16 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 192.168.1.90, 44341, None)
+Filas cargadas: 1000000 | Columnas: 23
+root
+ |-- fecha_reporte_web: string (nullable = true)
+ |-- id_de_caso: string (nullable = true)
+ |-- fecha_de_notificaci_n: string (nullable = true)
+ |-- departamento: string (nullable = true)
+ |-- departamento_nom: string (nullable = true)
+ |-- ciudad_municipio: string (nullable = true)
+ |-- ciudad_municipio_nom: string (nullable = true)
+ |-- edad: string (nullable = true)
+ |-- unidad_medida: string (nullable = true)
+ |-- sexo: string (nullable = true)
+ |-- fuente_tipo_contagio: string (nullable = true)
+ |-- ubicacion: string (nullable = true)
+ |-- estado: string (nullable = true)
+ |-- pais_viajo_1_cod: string (nullable = true)
+ |-- pais_viajo_1_nom: string (nullable = true)
+ |-- recuperado: string (nullable = true)
+ |-- fecha_inicio_sintomas: string (nullable = true)
+ |-- fecha_muerte: string (nullable = true)
+ |-- fecha_diagnostico: string (nullable = true)
+ |-- fecha_recuperado: string (nullable = true)
+ |-- tipo_recuperacion: string (nullable = true)
+ |-- per_etn_: string (nullable = true)
+ |-- nom_grupo_: string (nullable = true)
+
++-------------------+----------------+--------------------+----+-------------+----+---------+
+|fecha_reporte_web  |departamento_nom|ciudad_municipio_nom|edad|unidad_medida|sexo|estado   |
++-------------------+----------------+--------------------+----+-------------+----+---------+
+|2020-12-24 00:00:00|VALLE           |CALI                |67  |1            |F   |Leve     |
+|2020-12-24 00:00:00|VALLE           |CALI                |66  |1            |F   |Leve     |
+|2020-12-24 00:00:00|VALLE           |CALI                |68  |1            |F   |Leve     |
+|2020-12-24 00:00:00|VALLE           |CALI                |74  |1            |F   |Fallecido|
+|2020-12-24 00:00:00|VALLE           |CALI                |65  |1            |F   |Leve     |
++-------------------+----------------+--------------------+----+-------------+----+---------+
+only showing top 5 rows
+
+Nulos en columnas clave:
++----------------+----+-----------------+----+
+|departamento_nom|edad|fecha_reporte_web|sexo|
++----------------+----+-----------------+----+
+|               0|   0|                0|   0|
++----------------+----+-----------------+----+
+
+26/10/29 21:14:27 WARN SparkStringUtils: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
+Filas despues de limpiar: 1000000
+Resumen de la edad (anios):
++-------+------------------+
+|summary|        edad_anios|
++-------+------------------+
+|  count|           1000000|
+|   mean|         39.583125|
+| stddev|17.762696409829186|
+|    min|                 0|
+|    max|               110|
++-------+------------------+
+
+Top 10 departamentos por casos:
++----------------+------+-------------+
+|departamento_nom|casos |edad_promedio|
++----------------+------+-------------+
+|BOGOTA          |301588|38.6         |
+|ANTIOQUIA       |158011|39.7         |
+|VALLE           |64519 |41.6         |
+|BARRANQUILLA    |54463 |40.5         |
+|CUNDINAMARCA    |53838 |38.9         |
+|SANTANDER       |45065 |40.3         |
+|ATLANTICO       |28609 |39.7         |
+|CARTAGENA       |25927 |38.6         |
+|CALDAS          |22820 |41.1         |
+|CESAR           |21277 |38.6         |
++----------------+------+-------------+
+only showing top 10 rows
+
+Casos por mes:
++----+---+------+
+|anio|mes| casos|
++----+---+------+
+|2020|  3|     1|
+|2020|  5|  5618|
+|2020|  6|  8827|
+|2020|  7| 26677|
+|2020|  8| 43955|
+|2020|  9| 28194|
+|2020| 10| 31130|
+|2020| 11| 31933|
+|2020| 12| 41820|
+|2021|  1| 25665|
+|2021|  2|   236|
+|2021|  3|   259|
+|2021|  4|298617|
+|2021|  5|236757|
+|2021|  6|218773|
+|2021|  7|  1186|
+|2021|  8|   295|
+|2021|  9|    36|
+|2021| 10|     2|
+|2022|  1|    19|
++----+---+------+
+
+Casos por sexo:
++----+------+
+|sexo| count|
++----+------+
+|   F|526748|
+|   M|473252|
++----+------+
+
+Casos por estado:
++---------+------+
+|   estado| count|
++---------+------+
+|     Leve|969178|
+|Fallecido| 26663|
+|      N/a|  4159|
++---------+------+
+
+Casos por grupo de edad:
++----------+------+
+|grupo_edad| count|
++----------+------+
+|      0-17| 85991|
+|     18-29|232305|
+|     30-44|314013|
+|     45-59|224617|
+|       60+|143074|
++----------+------+
+
+Departamentos distintos (count): 36
+Departamentos con mas de 10.000 casos (collect): [('RISARALDA', 15501), ('CUNDINAMARCA', 53838), ('STA MARTA D.E.', 14557), ('GUAJIRA', 12391), ('CALDAS', 22820), ('CORDOBA', 18243), ('TOLIMA', 16114), ('ANTIOQUIA', 158011), ('SUCRE', 13007), ('BARRANQUILLA', 54463), ('CARTAGENA', 25927), ('META', 14770), ('BOYACA', 19762), ('CESAR', 21277), ('NORTE SANTANDER', 14787), ('BOGOTA', 301588), ('VALLE', 64519), ('ATLANTICO', 28609), ('HUILA', 12639), ('NARIÑO', 16404), ('SANTANDER', 45065)]
+Top 5 (take): [('BOGOTA', 301588), ('ANTIOQUIA', 158011), ('VALLE', 64519), ('BARRANQUILLA', 54463), ('CUNDINAMARCA', 53838)]
+Total de casos (reduce): 1000000
+Graficas guardadas en la carpeta salidas
